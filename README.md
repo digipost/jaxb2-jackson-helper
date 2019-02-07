@@ -1,5 +1,4 @@
-Digipost JAXB2 Jackson Helper
-===============================
+# Digipost JAXB2 Jackson Helper
 
 In order to help Jackson a bit, this JAXB2/XJC plugin will add `@XmlElement(nillable=false)` if `nillable=false` and `minoccurs=0` is set in XSD.
 

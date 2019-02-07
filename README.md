@@ -1,5 +1,6 @@
 # Digipost JAXB2 Jackson Helper
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/no.digipost.jaxb/jaxb2-jackson-helper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/no.digipost.jaxb/jaxb2-jackson-helper)
 [![Build Status](https://travis-ci.org/digipost/jaxb2-jackson-helper.svg?branch=master)](https://travis-ci.org/digipost/jaxb2-jackson-helper)
 
 In order to help Jackson a bit, this JAXB2/XJC plugin will add `@XmlElement(nillable=false)` if `nillable=false` and `minoccurs=0` is set in XSD.

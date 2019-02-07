@@ -34,3 +34,7 @@ For instance, if you use [maven-jaxb2-plugin](https://github.com/highsource/mave
 ## License
 
 Digipost JAXB2 Jackson Helper is licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+## Releasing (Digipost organization members only)
+
+See docs/systemer/open-source-biblioteker.md

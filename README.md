@@ -15,7 +15,7 @@ For instance, if you use [maven-jaxb2-plugin](https://github.com/highsource/mave
 <plugin>
   <groupId>org.jvnet.jaxb2.maven2</groupId>
   <artifactId>maven-jaxb2-plugin</artifactId>
-  <version>0.13.3</version>
+  <version><!-- TODO: Replace with newest compatible version number --></version>
   <configuration>
     <args>
       <arg>-Xjacksonfive</arg>
@@ -25,7 +25,7 @@ For instance, if you use [maven-jaxb2-plugin](https://github.com/highsource/mave
       <plugin>
         <groupId>no.digipost.jaxb</groupId>
         <artifactId>jaxb2-jackson-helper</artifactId>
-        <version>1.0</version>
+        <version><!-- TODO: Replace with newest version number --></version>
       </plugin>
 ...
 ```

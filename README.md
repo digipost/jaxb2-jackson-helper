@@ -1,5 +1,7 @@
 # Digipost JAXB2 Jackson Helper
 
+[![Build Status](https://travis-ci.org/digipost/jaxb2-jackson-helper.svg?branch=master)](https://travis-ci.org/digipost/jaxb2-jackson-helper)
+
 In order to help Jackson a bit, this JAXB2/XJC plugin will add `@XmlElement(nillable=false)` if `nillable=false` and `minoccurs=0` is set in XSD.
 
 
@@ -31,6 +33,3 @@ For instance, if you use [maven-jaxb2-plugin](https://github.com/highsource/mave
 ## License
 
 Digipost JAXB2 Jackson Helper is licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
-
-
-[![Build Status](https://travis-ci.org/digipost/jaxb2-jackson-helper.svg?branch=master)](https://travis-ci.org/digipost/jaxb2-jackson-helper)

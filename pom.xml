@@ -23,12 +23,12 @@
     <parent>
         <groupId>no.digipost</groupId>
         <artifactId>digipost-open-super-pom</artifactId>
-        <version>1</version>
+        <version>6</version>
     </parent>
 
     <groupId>no.digipost.jaxb</groupId>
     <artifactId>jaxb2-jackson-helper</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>LOCAL-SNAPSHOT</version>
     <name>JAXB2 Jackson-helper</name>
     <description>Plugin to add @XmlElement(nillable=false) if nillable=false and minoccurs=0 is set in xsd to help Jackson</description>
 
@@ -104,6 +104,9 @@
                         <excludes>
                             <exclude>LICENSE</exclude>
                             <exclude>NOTICE</exclude>
+                            <exclude>.java-version</exclude>
+                            <exclude>.mvn/maven.config</exclude>
+                            <exclude>.github/**/*.yml</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -181,7 +184,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.0-M1</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>

@@ -1,7 +1,9 @@
 # Digipost JAXB2 Jackson Helper
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/no.digipost.jaxb/jaxb2-jackson-helper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/no.digipost.jaxb/jaxb2-jackson-helper)
-[![Build Status](https://travis-ci.org/digipost/jaxb2-jackson-helper.svg?branch=master)](https://travis-ci.org/digipost/jaxb2-jackson-helper)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/no.digipost/jaxb2-jackson-helper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/no.digipost/jaxb2-jackson-helper)
+![](https://github.com/digipost/jaxb2-jackson-helper/workflows/Build%20snapshot/badge.svg)
+[![License](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/digipost/jaxb2-jackson-helper/blob/master/LICENCE)
+
 
 In order to help Jackson a bit, this JAXB2/XJC plugin will add `@XmlElement(nillable=false)` if `nillable=false` and `minoccurs=0` is set in XSD.
 
@@ -35,6 +37,3 @@ For instance, if you use [maven-jaxb2-plugin](https://github.com/highsource/mave
 
 Digipost JAXB2 Jackson Helper is licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-## Releasing (Digipost organization members only)
-
-See docs/systemer/open-source-biblioteker.md

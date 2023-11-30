@@ -1,6 +1,25 @@
-Digipost JAXB2 Jackson Helper
+JAXB2 Jackson-helper
 
-Copyright 2015 Posten Norge AS. All Rights Reserved.
+Copyright 2015-2023 Posten Norge AS. All Rights Reserved.
 
 This product includes software developed by Posten Norge AS. - https://www.posten.no/
 Licensed under Apache 2 - http://www.apache.org/licenses/LICENSE-2.0.html
+
+
+This software includes third party software subject to the following licenses:
+
+  Angus Activation Registries under EDL 1.0
+  Codemodel Core under Eclipse Distribution License - v 1.0
+  DTD Parser under Eclipse Distribution License - v 1.0
+  istack common utility code runtime under Eclipse Distribution License - v 1.0
+  istack common utility code tools under Eclipse Distribution License - v 1.0
+  Jakarta Activation API under EDL 1.0
+  Jakarta XML Binding API under Eclipse Distribution License - v 1.0
+  JAXB Core under Eclipse Distribution License - v 1.0
+  JAXB XJC under Eclipse Distribution License - v 1.0
+  JAXB2 Jackson-helper under The Apache Software License, Version 2.0
+  RelaxNG Datatype under Eclipse Distribution License - v 1.0
+  RNGOM under Eclipse Distribution License - v 1.0
+  TXW2 Runtime under Eclipse Distribution License - v 1.0
+  XSOM under Eclipse Distribution License - v 1.0
+

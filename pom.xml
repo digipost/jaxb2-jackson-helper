@@ -16,21 +16,24 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>no.digipost</groupId>
         <artifactId>digipost-open-super-pom</artifactId>
-        <version>6</version>
+        <version>13</version>
     </parent>
 
     <groupId>no.digipost.jaxb</groupId>
     <artifactId>jaxb2-jackson-helper</artifactId>
     <version>LOCAL-SNAPSHOT</version>
     <name>JAXB2 Jackson-helper</name>
-    <description>Plugin to add @XmlElement(nillable=false) if nillable=false and minoccurs=0 is set in xsd to help Jackson</description>
+    <description>Plugin to add @XmlElement(nillable=false) if nillable=false and minoccurs=0 is set in xsd to help
+        Jackson
+    </description>
 
     <licenses>
         <license>
@@ -41,8 +44,8 @@
     </licenses>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -57,21 +60,21 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.jvnet.jaxb2_commons</groupId>
-            <artifactId>jaxb2-basics-jaxb-xjc</artifactId>
-            <version>2.2.4-1</version>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>4.0.4</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.sun.codemodel</groupId>
+            <groupId>org.glassfish.jaxb</groupId>
             <artifactId>codemodel</artifactId>
-            <version>2.4</version>
+            <version>4.0.4</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -82,7 +85,7 @@
             <plugins>
                 <plugin>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.4.1</version>
                     <configuration>
                         <rules>
                             <bannedDependencies>
@@ -95,34 +98,31 @@
                                 </includes>
                                 <searchTransitive>true</searchTransitive>
                                 <message>
-                                    This library should only depend on APIs provided by the JAXB/XJC runtime it is used as a plugin for!
+                                    This library should only depend on APIs provided by the JAXB/XJC runtime it is used
+                                    as a plugin for!
                                 </message>
                             </bannedDependencies>
                         </rules>
                     </configuration>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.3</version>
-                </plugin>
-                <plugin>
                     <groupId>com.mycila</groupId>
                     <artifactId>license-maven-plugin</artifactId>
                     <version>3.0</version>
                     <configuration>
-                        <header>src/main/license-header.txt</header>
+                        <header>src/license-header.txt</header>
                         <excludes>
                             <exclude>LICENSE</exclude>
-                            <exclude>NOTICE</exclude>
+                            <exclude>**/*NOTICE*</exclude>
                             <exclude>.java-version</exclude>
-                            <exclude>.mvn/maven.config</exclude>
+                            <exclude>.mvn/*.*</exclude>
                             <exclude>.github/**/*.yml</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.7.0</version>
+                    <version>3.11.0</version>
                     <configuration>
                         <compilerArgs>
                             <arg>-Xlint</arg>
@@ -131,36 +131,36 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.20.1</version>
+                    <version>3.2.2</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
+                    <version>3.1.1</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.3.2</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.6.1</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
+                    <version>3.1.1</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.3.1</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.3.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
-                    <version>2.5</version>
+                    <version>2.16.2</version>
                     <configuration>
                         <generateBackupPoms>false</generateBackupPoms>
                     </configuration>
@@ -203,24 +203,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <additionalparam>-Xdoclint:-missing</additionalparam>
                     <quiet>true</quiet>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <includePom>true</includePom>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>

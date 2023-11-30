@@ -16,7 +16,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -30,7 +31,9 @@
     <artifactId>jaxb2-jackson-helper</artifactId>
     <version>LOCAL-SNAPSHOT</version>
     <name>JAXB2 Jackson-helper</name>
-    <description>Plugin to add @XmlElement(nillable=false) if nillable=false and minoccurs=0 is set in xsd to help Jackson</description>
+    <description>Plugin to add @XmlElement(nillable=false) if nillable=false and minoccurs=0 is set in xsd to help
+        Jackson
+    </description>
 
     <licenses>
         <license>
@@ -53,15 +56,15 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.jvnet.jaxb2_commons</groupId>
-            <artifactId>jaxb2-basics-jaxb-xjc</artifactId>
-            <version>2.2.4-1</version>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>4.0.4</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.sun.codemodel</groupId>
+            <groupId>org.glassfish.jaxb</groupId>
             <artifactId>codemodel</artifactId>
-            <version>2.6</version>
+            <version>4.0.4</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -85,7 +88,8 @@
                                 </includes>
                                 <searchTransitive>true</searchTransitive>
                                 <message>
-                                    This library should only depend on APIs provided by the JAXB/XJC runtime it is used as a plugin for!
+                                    This library should only depend on APIs provided by the JAXB/XJC runtime it is used
+                                    as a plugin for!
                                 </message>
                             </bannedDependencies>
                         </rules>
@@ -96,12 +100,12 @@
                     <artifactId>license-maven-plugin</artifactId>
                     <version>3.0</version>
                     <configuration>
-                        <header>src/main/license-header.txt</header>
+                        <header>src/license-header.txt</header>
                         <excludes>
                             <exclude>LICENSE</exclude>
-                            <exclude>NOTICE</exclude>
+                            <exclude>**/*NOTICE*</exclude>
                             <exclude>.java-version</exclude>
-                            <exclude>.mvn/maven.config</exclude>
+                            <exclude>.mvn/*.*</exclude>
                             <exclude>.github/**/*.yml</exclude>
                         </excludes>
                     </configuration>
@@ -191,21 +195,6 @@
                 <configuration>
                     <quiet>true</quiet>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <includePom>true</includePom>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
